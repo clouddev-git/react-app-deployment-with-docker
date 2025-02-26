@@ -1,5 +1,5 @@
 #!/bin/bash
-docker login -u $DOCKER_USERNAME -p $DOCKER_PASS
+docker login -u arul143 -p Vijayalakshmi@2718
 docker stop reactcon
 docker rm reactcon
 docker build -t reactapp .

@@ -1,8 +1,8 @@
 #!/bin/bash
 docker login -u arul143 -p Vijayalakshmi@2718
-docker stop reactcon
-docker rm reactcon
-docker build -t finalimg .
-docker run -itd --name react -p 80:80 finalimg
-docker tag finalimg arul143/finalapp:ci-cd
-docker push arul143/finalapp:ci-cd
+docker stop procon
+docker rm procon
+docker build -t reactimg .
+docker run -itd --name reactcon -p 80:80 reactimg
+docker tag reactimg arul143/reactapplication:ci-cd
+docker push arul143/reactapplication:ci-cd

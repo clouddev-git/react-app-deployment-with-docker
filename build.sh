@@ -1,8 +1,6 @@
 #!/bin/bash
 docker login -u arul143 -p Vijayalakshmi@2718
-docker stop projectcontainer
-docker rm projectcontainer
-docker build -t reactapplicationimg .
-docker run -itd --name reactapplicationcontainer -p 80:80 reactapplicationimg
-docker tag reactapplicationimg arul143/reactapplicationimage:ci-cd
-docker push arul143/reactapplicationimage:ci-cd
+docker build -t reactimg .
+docker run -itd --name reactcon -p 80:80 reactimg
+docker tag reactimg arul143/reactapplication:ci-cd
+docker push arul143/reactapplication:ci-cd

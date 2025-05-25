@@ -1,6 +1,8 @@
 #!/bin/bash
-docker login -u arul143 -p Vijayalakshmi@2718
-docker build -t proimg .
-docker run -itd --name procon -p 80:80 proimg
-docker tag proimg arul143/proapplication:ci-cd
-docker push arul143/proapplication:ci-cd
+docker login -u $DOCKER_USERNAME -p $DOCKER_PASS
+docker stop react
+docker rm -f react
+docker build -t proimg-ci/cd .
+docker run -itd --name procon -p 80:80 proimg-ci/cd
+docker tag proimg-ci/cd arul143/application:ci-cd
+docker push arul143/application:ci-cd
